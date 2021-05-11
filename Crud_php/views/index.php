@@ -1,55 +1,18 @@
-<style>
-a.button {
-  position: relative;
-  background-color: #4d4d4d;
-  border: none;
-  font-size: 20px;
-  color: #FFFFFF;
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px;
-  transition-duration: 0.4s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.button:after {
-  content: "";
-  background: #f1f1f1;
-  color: #FFFFFF;
-  display: block;
-  position: absolute;
-  padding-top: 10%;
-  padding-left: 20%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
-
-.button:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
-
-</style>
 
 <?php
   include_once 'includes/header.php';
+  include '../db/servicos_db.php'
 ?>
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" style="background-color: #2d5e63; color: #FFFFFF;">
   <h1>Cadastros PetShop</h1>
   <p>Selecione a tabela para atualizar os items.</p>
 </div>
 
 <div class="container">
-  <div class="row">
+  <div class="row" style="margin-top: 100px;">
   <br><br>
     <div class="col-sm-4" align="left">
-      <p><a class="button" href="views/servicos.php" target="_blank">Serviços</a></p>
+      <p><a class="button" href="servico/servicos.php" target="_blank">Serviços</a></p>
       <p>Lorem ipsum dolor..</p>
     </div>
     <div class="col-sm-4" align="center">
