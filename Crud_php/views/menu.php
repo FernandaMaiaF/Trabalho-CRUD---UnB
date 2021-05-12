@@ -12,7 +12,7 @@
   <div class="row" style="margin-top: 100px;">
   <br><br>
     <div class="col-sm-4" align="left">
-      <p><a class="button" href="servico/servicos.php" target="_blank">Serviços</a></p>
+      <p><a class="button" href="servico/index.php" target="_blank">Serviços</a></p>
       <p>Lorem ipsum dolor..</p>
     </div>
     <div class="col-sm-4" align="center">

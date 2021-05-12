@@ -21,17 +21,16 @@
                 </button>
               </div>
               <div class="modal-body">
-                <form method="post" action="../../actions/add_servico.php">
+                <form method="post" action="../../actions/ServicoController.php">
                   <div class="form-group">
                     <label>Descrição</label>
                     <input type="text" required name="servico" class="form-control">
                   </div>
-                  <input type="submit" name="send" value="Novo Servico" class="btn btn-success">
+                  <input type="submit" name="send" value="Salvar" class="btn btn-success">
                 </form>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div>
           </div>
@@ -56,8 +55,8 @@
             
             <th> <?php echo $row["ID"]?> </th>
             <td class="col-md-5"><?php echo $row["Descricao"]?></td>
-            <td><a href="" class="btn btn-success">Editar</a></td>
-            <td><a href="" class="btn btn-danger">Excluir</a></td>
+            <td><a href="update.php?ID=<?php echo $row['ID'];?>"  class="btn btn-success">Editar</a></td>
+            <td><a href="../../actions/ServicoController.php?ID=<?php echo $row['ID'];?>&action=delete" class="btn btn-danger">Excluir</a></td>
           </tr>
             <?php endwhile;?>
         </tbody>
