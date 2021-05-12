@@ -14,12 +14,4 @@ $dbname = "bd_petshop";
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
-  //---------------------------------------
-
-  $sql = "select * from tipo_produtos";
-  $servicos = $conn->query($sql);
-  if ($servicos != TRUE) {
-    echo "Error creating database: " . $conn->error;
-  }
-  
 ?>
