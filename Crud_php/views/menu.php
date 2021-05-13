@@ -15,7 +15,7 @@
       <p><a class="button" style="padding: 10% 30% 10% 30%; " href="clientes/index.php" target="_self">Clientes</a></p>
     </div>
     <div class="col-sm-4" align="center">
-      <p><a class="button"  style="padding: 10% 30% 10% 30%;" href="Political/Thread/thread_insert.php" target="_self">Pets</a></p>
+      <p><a class="button"  style="padding: 10% 30% 10% 30%;" href="pet/index.php" target="_self">Pets</a></p>
     </div>
     <div class="col-sm-4" align="right">
       <p><a class="button" style="padding: 10% 30% 10% 30%;" href="servico/index.php" target="_self">Serviços</a></p>
