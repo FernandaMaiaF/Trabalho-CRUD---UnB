@@ -1,6 +1,6 @@
 <?php
-  include_once '../includes/header.php';
-  include '../../db/servicos_db.php';
+  include_once '../add/header.php';
+  include '../../.db/db_connection.php';
   include '../../actions/ServicoController.php';
 
   $id = $_GET['ID'];
@@ -15,7 +15,7 @@
   <div class="container">
     <h1>Cadastro de Serviços</h1>
     <br>
-    <a class="button" href="index.php" target="_blank">Serviços</a>
+    <a class="button" href="index.php" target="_self">Serviços</a>
   </div>
 </div>
 
@@ -38,5 +38,5 @@
 </div>
 
 <?php
-  include_once '../includes/footer.php';
+  include_once '../add/footer.php';
 ?>

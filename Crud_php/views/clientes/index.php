@@ -1,10 +1,9 @@
 <?php
   include_once '../add/header.php';
   include '../../.db/db_connection.php';
-  include '../../actions/ServicoController.php';
+  include '../../actions/ClientesController.php';
 
-  $servicos = find_produtos($conn);
-  
+  $clientes = find_all($conn);
   
 ?>
 <style>
@@ -36,12 +35,12 @@
 </style>
 <div class="jumbotron" style="background-color: #2d5e63; color: #FFFFFF;">
   <div class="container">
-    <h1>Cadastro de Serviços</h1>
+    <h1>Cadastro de Clientes</h1>
     <br>
     <a class="button" href="../menu.php" target="_self">Menu</a>
     <div class="column" style="position: absolute; right: 22%;">
         <button class="btn" data-toggle="modal" data-target="#myModal">
-          Novo Serviço
+          Novo Cliente
         </button>
     </div>
   </div>
@@ -62,10 +61,20 @@
                 </button>
               </div>
               <div class="modal-body">
-                <form method="post" action="../../actions/ServicoController.php">
+                <form method="post" action="../../actions/ClientesController.php">
                   <div class="form-group">
-                    <label>Descrição</label>
-                    <input type="text" required name="servico" class="form-control">
+                    <label>Nome</label>
+                    <input type="text" required name="nome" class="form-control">
+                    <br>
+                    <label>CPF</label>
+                    <input type="text" required name="cpf"  class="form-control">
+                    <br>
+                    <label>data de Nascimento</label>
+                    <input type="text" required name="nasc"  class="form-control">
+                    <br>
+                    <label>Endereco</label>
+                    <input type="text" required name="end"  class="form-control">
+                
                   </div>
                   <input type="submit" name="send" value="Salvar" class="btn btn-success">
                 </form>
@@ -84,7 +93,10 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Descricao</th>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Nascimento</th>
+            <th scope="col">Endereço</th>
             <th scope="col"> </th>
             <th scope="col"> </th>
             <th scope="col"> </th>
@@ -92,13 +104,16 @@
         </thead>
         <tbody>
           <tr>
-          <?php while($row = $servicos->fetch(PDO::FETCH_ASSOC) ): ?>
+          <?php while($row = $clientes->fetch(PDO::FETCH_ASSOC) ): ?>
             
-            <th> <?php echo $row["ID"]?> </th>
-            <td class="col-md-5"><?php echo $row["Descricao"]?></td>
+            <th class="col-xs-6"> <?php echo $row["ID"]?> </th>
+            <td class="col-xs-6"><?php echo $row["Nome"]?></td>
+            <td class="col-xs-6"><?php echo $row["CPF"]?></td>
+            <td class="col-xs-6"><?php echo $row["Nascimento"]?></td>
+            <td class="col-xs-6"><?php echo $row["Endereco"]?></td>
             <td><a href="view.php?ID=<?php echo $row['ID'];?>"><button class="btn btn-circle-sec"><i class="fa fa-eye" style="color:#FFFFFF"></i></button></a></td>
             <td><a href="update.php?ID=<?php echo $row['ID'];?>"><button class="btn btn-circle"><i class="fa fa-pencil" style="color:#FFFFFF"></i> </button></a></td>
-            <td><a href="../../actions/ServicoController.php?ID=<?php echo $row['ID'];?>&action=delete"><button class="btn btn-circle-denger"><i class="fa fa-trash" style="color:#FFFFFF"></i> </button></a></td>
+            <td><a href="../../actions/ClientesController.php?ID=<?php echo $row['ID'];?>&action=delete"><button class="btn btn-circle-denger"><i class="fa fa-trash" style="color:#FFFFFF"></i> </button></a></td>
             
           </tr>
             <?php endwhile;?>

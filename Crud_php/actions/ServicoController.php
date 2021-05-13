@@ -1,7 +1,7 @@
 
 
 <?php
-  include '../db/servicos_db.php';
+  include '../.db/db_connection.php';
 
   if(!$conn) {
     echo "erro";
@@ -30,9 +30,7 @@
   function update ($novo_nome, $id, $conn) {
     $tipo_produtos = $_POST['tipo_produtos'];
     $sql = "update tipo_produtos set Descricao = '$tipo_produtos' where ID = '$id'";
-    var_dump($sql);
     $val = $conn->query($sql);
-    var_dump($val);
     if($val){
       header('location: index.php');
     }
@@ -52,7 +50,6 @@
 
   if ($action == 'delete'){
     $id = $_GET['ID'];
-    echo "foi";
     $sql = "delete from tipo_produtos where ID = '$id'";
     $val = $conn->query($sql);
 
