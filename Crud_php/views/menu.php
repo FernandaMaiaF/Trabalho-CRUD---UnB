@@ -5,7 +5,7 @@
 ?>
 <div class="jumbotron text-center" style="background-color: #2d5e63; color: #FFFFFF;">
   <h1>Cadastros PetShop</h1>
-  <p>Selecione a tabela para atualizar os items.</p>
+  <p>Selecione uma tabela para atualizar os items.</p>
 </div>
 
 <div class="container">
@@ -28,19 +28,9 @@
 <br>
 </div>
 <br>
-<div class="container">
-  <div class="row">
-  <div class="col-sm-4" align="left">
-      <p><a class="button" style="padding: 10% 30% 10% 30%;" href="clientes/index.php" target="_self">Clientes</a></p>
-    </div>
-    <div class="col-sm-4" align="center">
-      <p><a class="button"  style="padding: 10% 30% 10% 30%;" href="Political/Thread/thread_insert.php" target="_self">Pets</a></p>
-    </div>
-    <div class="col-sm-4" align="right">
-      <p><a class="button" style="padding: 10% 30% 10% 30%;" href="servico/index.php" target="_self">Serviços</a></p>
-    </div>
-  </div>
-</div>
+
+
+
 <?php
   include_once 'includes/footer.php';
 ?>

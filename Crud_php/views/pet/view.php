@@ -69,7 +69,7 @@
             <th scope="col"><?php echo $row["Porte"]?></th>
           </tr>
           <tr>
-            <th scope="col">Raça</th>
+            <th scope="col">Tipo Animal</th>
             <th scope="col"><?php echo $row["Raca"]?></th>
           </tr>
         </thead>

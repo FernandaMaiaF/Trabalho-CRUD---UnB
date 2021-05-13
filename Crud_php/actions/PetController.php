@@ -2,6 +2,7 @@
 <?php
   include '../.db/db_connection.php';
 
+  
   if(!$conn) {
     echo "erro";
   } 
@@ -123,7 +124,14 @@
     $val = $conn->query($sql);
     if($val) {
       header('location: ../views/pet/index.php');
+    } else {
+      var_dump("Verifique se os dados inseridos estão de acordo com a tabela de Dono, Sexo, Porte e Tipo de Animal");
+      echo "Verifique se os dados inseridos estão de acordo com a tabela de Dono, Sexo, Porte e Tipo de Animal";
+      
     }
+    var_dump("Verifique se os dados inseridos estão de acordo com a tabela de Dono, Sexo, Porte e Tipo de Animal");
+    echo "Verifique se os dados inseridos estão de acordo com a tabela de Dono, Sexo, Porte e Tipo de Animal";
+      
   } 
   
 

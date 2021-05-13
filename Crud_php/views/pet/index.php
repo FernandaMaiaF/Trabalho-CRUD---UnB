@@ -75,7 +75,7 @@
                     <label>Porte</label>
                     <input type="text" required name="porte"  class="form-control">
                     <br>
-                    <label>Raça</label>
+                    <label>Tipo Animal</label>
                     <input type="text" required name="raca"  class="form-control">
                 
                   </div>
@@ -100,7 +100,7 @@
             <th scope="col">Dono</th>
             <th scope="col">Sexo</th>
             <th scope="col">Porte</th>
-            <th scope="col">Raça</th>
+            <th scope="col">Tipo Animal</th>
             <th scope="col"> </th>
             <th scope="col"> </th>
             <th scope="col"> </th>

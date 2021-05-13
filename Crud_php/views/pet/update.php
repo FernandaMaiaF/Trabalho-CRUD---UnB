@@ -39,7 +39,7 @@
                   <input type="text" required name="porte" value="<?php echo $row['Porte']; ?>" class="form-control" style="position: sticky; width: 600px;">
                   </div>
                   <br>
-                  <label>Raça</label>
+                  <label>Tipo Animal</label>
                   <input type="text" required name="raca" value="<?php echo $row['Raca']; ?>" class="form-control" style="position: sticky; width: 600px;">
                   <br>
                 <input type="submit" name="update" value="Atualizar" class="btn btn-success">
