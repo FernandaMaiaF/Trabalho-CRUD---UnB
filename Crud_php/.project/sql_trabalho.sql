@@ -235,5 +235,22 @@ insert into agendamento (Dia,Horario,IDConvenio,IDServico,IDDono,IDPet,IDMetodoP
 insert into agendamento (Dia,Horario,IDConvenio,IDServico,IDDono,IDPet,IDMetodoPag) values ('2021/05/17','14:30',2,4,3,3,1);
 insert into agendamento (Dia,Horario,IDConvenio,IDServico,IDDono,IDPet,IDMetodoPag) values ('2021/05/13','15:00',3,5,5,5,3);
 
--- Falta fazer include de vendas
+-- view
+create view DonosEPets as
+select clientes.Nome, pet.Nome as Bichano, sexo_pet.Descricao as Sexo, porte_pet.Descricao as Porte, raca_pet.Descricao as Raca
+from clientes,pet,sexo_pet,porte_pet,raca_pet
+where pet.IDono=clientes.ID and pet.IDSexo = sexo_pet.ID and pet.IDPorte = porte_pet.ID and pet.IDRaca = raca_pet.ID;
+-- procedure
+delimiter $$
+create procedure DonosEBichanos ()
+begin
+	select clientes.Nome, pet.Nome as Bichano, sexo_pet.Descricao as Sexo, porte_pet.Descricao as Porte, raca_pet.Descricao as Raca
+    from clientes,pet,sexo_pet,porte_pet,raca_pet
+    where pet.IDono=clientes.ID and pet.IDSexo = sexo_pet.ID and pet.IDPorte = porte_pet.ID and pet.IDRaca = raca_pet.ID
+;
+end $$
 
+-- insert binario
+create table ArqvBin (ID_Blob int(10) not null primary key, Image mediumblob);
+select *from  ArqvBin;
+insert into arqvbin (ID_Blob, Image) values (1,"C:\Users\cgdb2\Pictures\Saved Pictures");

@@ -28,7 +28,10 @@
 <br>
 </div>
 <br>
-
+<div class="container" align="center">
+      <p><a class="button" style="padding: 4% 10% 4% 10%;" href="procedure/index.php" target="_blank">Agendamentos do Dia</a></p>
+    
+</div>
 
 
 <?php
